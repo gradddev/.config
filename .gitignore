@@ -1,2 +1,9 @@
-zsh/*
-!zsh/.zpreztorc
+zsh/.zprezto
+
+zsh/.zshrc
+zsh/.zprofile
+zsh/.zshenv
+zsh/.zlogin
+zsh/.zlogout
+
+zsh/.zsh_history
