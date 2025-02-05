@@ -44,8 +44,6 @@ function prompt_atin_setup {
   # Tell prezto we can manage this prompt
   zstyle ':prezto:module:prompt' managed 'yes'
 
-  echo $TERM
-
   _prompt_atin_colors=(
       "%F{cyan}"
       "%F{yellow}"
