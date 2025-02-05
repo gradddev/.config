@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "nikitabobko/tap"
 brew "mas"
+brew "n"
 cask "aerospace"
 cask "figma"
 cask "font-iosevka"
