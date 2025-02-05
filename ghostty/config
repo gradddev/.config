@@ -7,3 +7,5 @@ window-padding-balance = true
 font-family = "Iosevka"
 font-size = 16
 theme = "catppuccin-mocha"
+
+keybind = global:control+option+command+t=toggle_quick_terminal
