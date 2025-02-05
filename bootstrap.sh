@@ -1,9 +1,5 @@
 #!/bin/zsh
 
-mkdir -p "$Home/Developer"
-
-yes | ssh-keygen -t ed25519 -N '' -f "$HOME/.ssh/id_ed25519" -C "mbp14"
-
 mv -f "$HOME/.config" "$HOME/.config-$RANDOM.backup"
 
 mkdir -p "$HOME/.config/zsh"
@@ -43,5 +39,13 @@ for rcfile in "$ZDOTDIR"/.zprezto/runcoms/^(README.md)(.N); do
 done
 
 source "$ZDOTDIR/.zprofile"
+
+if [ ! -d "$Home/Developer" ]; then
+    mkdir -p "$Home/Developer"
+fi
+
+if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
+    yes | ssh-keygen -t ed25519 -N '' -f "$HOME/.ssh/id_ed25519" -C "mbp14"
+fi
 
 brew bundle --file "$XDG_CONFIG_HOME/Brewfile"
