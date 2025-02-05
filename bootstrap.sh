@@ -48,4 +48,10 @@ if [ ! -f "$HOME/.ssh/id_ed25519" ]; then
     yes | ssh-keygen -t ed25519 -N '' -f "$HOME/.ssh/id_ed25519" -C "mbp14"
 fi
 
+sudo scutil --set HostName mbp14
+sudo scutil --set LocalHostName mbp14
+sudo scutil --set ComputerName mbp14
+
+dscacheutil -flushcache
+
 brew bundle --file "$XDG_CONFIG_HOME/Brewfile"
