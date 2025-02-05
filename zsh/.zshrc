@@ -10,4 +10,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
+# N
+export N_PREFIX="$XDG_DATA_HOME/n"
+
+path=($N_PREFIX/bin $path)
