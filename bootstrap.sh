@@ -1,5 +1,9 @@
 #!/bin/zsh
 
+mkdir -p "$Home/Developer"
+
+yes | ssh-keygen -t ed25519 -N '' -f "$HOME/.ssh/id_ed25519" -C "mbp14"
+
 mv -f "$HOME/.config" "$HOME/.config-$RANDOM.backup"
 
 mkdir -p "$HOME/.config/zsh"
