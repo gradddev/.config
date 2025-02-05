@@ -1,1 +1,2 @@
-zsh/.zprezto/
+zsh/*
+!zsh/.zpreztorc
