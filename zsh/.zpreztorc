@@ -38,6 +38,7 @@ zstyle ':prezto:load' pmodule \
   'spectrum' \
   'utility' \
   'completion' \
+  'autosuggestions' \
   'history-substring-search' \
   'prompt' \
   'homebrew'
