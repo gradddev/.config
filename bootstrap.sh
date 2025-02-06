@@ -54,4 +54,14 @@ sudo scutil --set ComputerName mbp14
 
 dscacheutil -flushcache
 
+# disable "Show Spotlight search" shortcut
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist \
+  -c "Delete :AppleSymbolicHotKeys:64" \
+  -c "Add :AppleSymbolicHotKeys:64:enabled bool false"
+
+# disable "Show Finder search window" shortcut
+/usr/libexec/PlistBuddy ~/Library/Preferences/com.apple.symbolichotkeys.plist \
+  -c "Delete :AppleSymbolicHotKeys:65" \
+  -c "Add :AppleSymbolicHotKeys:65:enabled bool false"
+
 brew bundle --file "$XDG_CONFIG_HOME/Brewfile"
